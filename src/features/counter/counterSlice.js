@@ -31,6 +31,7 @@ export const counterSlice = createSlice({
       // which detects changes to a "draft state" and produces a brand new
       // immutable state based off those changes
       state.value += 1;
+      console.log(state)
     },
     decrement: (state) => {
       state.value -= 1;
@@ -38,6 +39,7 @@ export const counterSlice = createSlice({
     // Use the PayloadAction type to declare the contents of `action.payload`
     incrementByAmount: (state, action) => {
       state.value += action.payload;
+      console.log(state, action)
     },
   },
   // The `extraReducers` field lets the slice handle actions defined elsewhere,
